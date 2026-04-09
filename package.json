@@ -52,6 +52,8 @@
     "preview": "rsbuild preview",
     "build": "rslib build",
     "build:demo": "rsbuild build",
+    "serve:demo": "npx serve dist-demo",
+    "serve:subdir": "PUBLIC_BASE_PATH=/dist-demo rsbuild build && npx serve",
     "build:dev": "rslib build --mode development",
     "lint": "biome lint .",
     "format": "biome format . --write",
