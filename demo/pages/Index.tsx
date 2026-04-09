@@ -85,9 +85,7 @@ const Index = () => {
                     <CheckCircle size={16} />
                     Check JSON
                   </Button>
-                  <Button variant="outline" className="gap-2" size="sm" asChild>
-                    <Link to="/iframe-example">Iframe example</Link>
-                  </Button>
+                  
                 </>
               }
             />

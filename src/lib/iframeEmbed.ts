@@ -16,7 +16,7 @@ export interface SchemaEditorController {
 
 const DEFAULT_IFRAME_URL =
   "https://ali-corpo.github.io/json-schema-editor-lib/";
-const DEFAULT_HEIGHT = "560px";
+const DEFAULT_HEIGHT = "700px";
 const DEFAULT_SCHEMA: JSONSchema = {
   type: "object",
   properties: {},
