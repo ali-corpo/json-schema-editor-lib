@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import type { FC, ReactNode } from "react";
 import { useTranslation } from "../../hooks/use-translation.ts";
 import {
   createFieldSchema,
@@ -16,6 +16,7 @@ export interface SchemaVisualEditorProps {
   schema: JSONSchema;
   readOnly: boolean;
   onChange: (schema: JSONSchema) => void;
+  toolbarActions?: ReactNode;
 }
 
 /** @public */
@@ -23,6 +24,7 @@ const SchemaVisualEditor: FC<SchemaVisualEditorProps> = ({
   schema,
   onChange,
   readOnly = false,
+  toolbarActions,
 }) => {
   const t = useTranslation();
   // Handle adding a top-level field
@@ -110,8 +112,9 @@ const SchemaVisualEditor: FC<SchemaVisualEditorProps> = ({
   return (
     <div className="p-4 h-full flex flex-col overflow-auto jsonjoy">
       {!readOnly && (
-        <div className="mb-6 shrink-0">
+        <div className="mb-6 shrink-0 flex flex-wrap items-center gap-2">
           <AddFieldButton onAddField={handleAddField} />
+          {toolbarActions}
         </div>
       )}
 

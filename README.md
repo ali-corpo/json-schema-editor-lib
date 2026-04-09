@@ -46,6 +46,39 @@ export function App() {
 }
 ```
 
+### Iframe Embedding Helper (No React)
+
+You can also attach the visual editor to a regular `<input>` or `<textarea>`.
+The helper hides the input, creates an iframe next to it, loads the input JSON (or a default schema), and keeps both sides in sync.
+
+Automatic mode (class-based):
+
+```html
+<script type="module" src="./dist/lib/iframeEmbed.js"></script>
+<textarea class="schema-editor" data-readonly="true">{"type":"object"}</textarea>
+```
+
+Manual mode:
+
+```html
+<script type="module">
+  import { schemaEditor } from "./dist/lib/iframeEmbed.js";
+  schemaEditor(document.getElementById("my-schema-input"));
+</script>
+```
+
+With npm + bundlers:
+
+```ts
+import { schemaEditor } from "jsonjoy-builder/iframe-embed";
+```
+
+Supported data attributes:
+
+- `data-readonly="true|false"`
+- `data-iframe-url="https://json.ophir.dev"`
+- `data-height="560px"`
+
 ### Styling
 
 To style the component, add custom CSS. For basic styling, there are some CSS custom properties ("variables")

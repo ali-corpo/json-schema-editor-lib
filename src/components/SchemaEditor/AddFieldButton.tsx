@@ -82,7 +82,7 @@ const AddFieldButton: FC<AddFieldButtonProps> = ({
       </Button>
 
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <DialogContent className="md:max-w-[1200px] max-h-[85vh] w-[95vw] p-4 sm:p-6 jsonjoy">
+        <DialogContent className="max-w-2xl max-h-[85vh] w-[95vw] p-4 sm:p-6 jsonjoy">
           <DialogHeader className="mb-4">
             <DialogTitle className="text-xl flex flex-wrap items-center gap-2">
               {t.fieldAddNewLabel}
@@ -96,7 +96,7 @@ const AddFieldButton: FC<AddFieldButtonProps> = ({
           </DialogHeader>
 
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-4">
               <div className="space-y-4 min-w-[280px]">
                 <div>
                   <div className="flex flex-wrap items-center gap-2 mb-1.5">
@@ -233,7 +233,7 @@ const AddFieldButton: FC<AddFieldButtonProps> = ({
                   />
                 </div>
 
-                <div className="rounded-lg border bg-muted/50 p-3 hidden md:block">
+                <div className="rounded-lg border bg-muted/50 p-3 hidden">
                   <p className="text-xs font-medium mb-2">
                     {t.fieldTypeExample}
                   </p>

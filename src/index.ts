@@ -9,6 +9,12 @@ import JsonSchemaVisualizer, {
 import SchemaVisualEditor, {
   type SchemaVisualEditorProps,
 } from "./components/SchemaEditor/SchemaVisualEditor.tsx";
+import {
+  autoInitSchemaEditors,
+  type SchemaEditorController,
+  type SchemaEditorOptions,
+  schemaEditor,
+} from "./lib/iframeEmbed.ts";
 
 export * from "./components/features/JsonValidator.tsx";
 export * from "./components/features/SchemaInferencer.tsx";
@@ -30,6 +36,10 @@ export {
   type JsonSchemaVisualizerProps,
   SchemaVisualEditor,
   type SchemaVisualEditorProps,
+  autoInitSchemaEditors,
+  schemaEditor,
+  type SchemaEditorController,
+  type SchemaEditorOptions,
 };
 
 export type { baseSchema, JSONSchema } from "./types/jsonSchema.ts";

@@ -11,6 +11,8 @@ export default defineConfig({
     port: 8080,
   },
   output: {
+    // Use relative URLs so the demo works from GitHub Pages project paths.
+    assetPrefix: "./",
     distPath: {
       root: "dist-demo",
     },

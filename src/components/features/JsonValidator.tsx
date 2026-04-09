@@ -121,12 +121,12 @@ export function JsonValidator({
           <DialogTitle>{t.validatorTitle}</DialogTitle>
           <DialogDescription>{t.validatorDescription}</DialogDescription>
         </DialogHeader>
-        <div className="flex-1 flex flex-col md:flex-row gap-4 py-4 overflow-hidden h-[600px]">
+        <div className="flex-1 flex flex-col md:flex-row gap-4 py-4 overflow-hidden h-[300px]">
           <div className="flex-1 flex flex-col h-full">
             <div className="text-sm font-medium mb-2">{t.validatorContent}</div>
             <div className="border rounded-md flex-1 h-full">
               <Editor
-                height="600px"
+                height="300px"
                 defaultLanguage="json"
                 value={jsonInput}
                 onChange={handleEditorChange}
@@ -149,7 +149,7 @@ export function JsonValidator({
             </div>
             <div className="border rounded-md flex-1 h-full">
               <Editor
-                height="600px"
+                height="300px"
                 defaultLanguage="json"
                 value={JSON.stringify(schema, null, 2)}
                 beforeMount={handleSchemaEditorBeforeMount}

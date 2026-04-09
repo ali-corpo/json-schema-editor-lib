@@ -86,6 +86,7 @@ const JsonSchemaVisualizer: FC<JsonSchemaVisualizerProps> = ({
         >
           <Download size={16} />
         </button>
+        
       </div>
       <div className="grow flex min-h-0">
         <Editor
