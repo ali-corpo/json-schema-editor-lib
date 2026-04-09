@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { TooltipProvider } from "../src/components/ui/tooltip.tsx";
 import { Toaster as Sonner } from "./components/ui/sonner.tsx";
 import { Toaster } from "./components/ui/toaster.tsx";
+import IframeExample from "./pages/IframeExample.tsx";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
@@ -16,6 +17,7 @@ const App = () => (
       <BrowserRouter basename={import.meta.env.PUBLIC_BASE_PATH}>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/iframe-example" element={<IframeExample />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

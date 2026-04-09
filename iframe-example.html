@@ -1,7 +1,13 @@
 <!doctype html>
 <html lang="en">
   <body>
-    <script type="module" src="https://ali-corpo.github.io/json-schema-editor-lib/lib/iframeEmbed.js"></script>
-    <input type="hidden" class="schema-editor" data-readonly="false"  value='{"type":"object","properties":{"name":{"type":"string"}}}'>
+    <script type="module" src="./iframeEmbed.js"></script>
+    <input
+      type="hidden"
+      class="schema-editor"
+      data-readonly="false"
+      data-iframe-url="./"
+      value='{"type":"object","properties":{"name":{"type":"string"}}}'
+    />
   </body>
 </html>

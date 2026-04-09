@@ -1,5 +1,6 @@
 import { CheckCircle, Shuffle } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { exampleSchema } from "../../demo/utils/schemaExample.ts";
 import { JsonSampleGenerator } from "../../src/components/features/JsonSampleGenerator.tsx";
 import { JsonValidator } from "../../src/components/features/JsonValidator.tsx";
@@ -83,6 +84,9 @@ const Index = () => {
                   >
                     <CheckCircle size={16} />
                     Check JSON
+                  </Button>
+                  <Button variant="outline" className="gap-2" size="sm" asChild>
+                    <Link to="/iframe-example">Iframe example</Link>
                   </Button>
                 </>
               }

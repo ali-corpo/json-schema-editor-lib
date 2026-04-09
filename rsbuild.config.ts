@@ -17,21 +17,40 @@ export default defineConfig({
       root: "dist-demo",
     },
   },
-  source: {
-    entry: {
-      index: "./demo/main.tsx",
-    },
-    define: {
-      ...publicVars,
-      "import.meta.env.SSR": "false",
-    },
-  },
-  html: {
-    template: "./index.html",
-  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+    },
+  },
+  environments: {
+    web: {
+      source: {
+        entry: {
+          index: "./demo/main.tsx",
+        },
+        define: {
+          ...publicVars,
+          "import.meta.env.SSR": "false",
+        },
+      },
+      html: {
+        template: "./index.html",
+      },
+    },
+    iframeEmbed: {
+      source: {
+        entry: {
+          iframeEmbed: "./src/lib/iframeEmbed.ts",
+        },
+      },
+      output: {
+        // Output iframeEmbed.js at the root of dist-demo (no subdirectory)
+        distPath: { js: "" },
+        filename: { js: "[name].js" },
+      },
+      tools: {
+        htmlPlugin: false,
+      },
     },
   },
 });
